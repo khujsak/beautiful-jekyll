@@ -1,16 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: test
+subtitle: Atom by Atom, Kernel by Kernel
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I am an aspiring computational scientist and experimental Materials Scientist completing my PhD at Northwestern University in the group of Vinayak P. Dravid.  I use concepts from data science and machine learning to approach large problems in "big imaging" of materials and structures at the nanoscale.  Although these structures and materials have characteristic lengths orders of magnitudes smaller than a human hair, new microscopes and cameras can generate terabytes of mixed images, spectra, volume, and 4D diffraction data after only minutes of use.  My focus is on using adaptive sampling strategies to reduce the generation of redundant data on the microscope, and novel visualization and analytic approaches to maximize the interpretability of data.
