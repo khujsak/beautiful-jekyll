@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nomad Transparent Conducting Oxide Kaggle Part 1
-subtitle: Vornoi Tesselation and Formation Energy Prediction
+subtitle: Voronoi Tesselation and Formation Energy Prediction
 use_math: true
 ---
 
@@ -143,7 +143,7 @@ The unit cells themselves may not occupy a perfect square, in fact this is very 
 
 As mentioned above, we are given the three crystal lattice vectors, which together can form a basis for the crystal: $$(a_1, a_2, a_3)^T$$.  We can describe the position of an atom in the crystal R(x,y,z), where x,y,z are the real space coordinates, in terms of the basis vectors themselves:
 
-$$R(x,y,z)=a_1+a_2y+a_3z$$
+$$R(x,y,z)=a_1x+a_2y+a_3z$$
 
 Taking the inverse of the basis vector matrix, we can solve for the reduced form coordinates:
 
