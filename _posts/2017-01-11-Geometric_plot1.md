@@ -141,7 +141,7 @@ Above, I have plotted the position of each atom in the unit cell according to it
 
 The unit cells themselves may not occupy a perfect square, in fact this is very uncommon!  To deal with oblique shapes and standardize the tesselation for many different sized unit cells in real space, we need to convert them to a common range.  Fortunately, the lattice vectors supply a basis for these structures in which the atoms extend from zero to one along each of the three basis vectors.  Transforming our structures to this space will allow us to create periodic examples of our unit cells.  Since real materials are composed of very large sets of this repeated unit cell structure, to accurately model the geometry we need to accomodate this periodicity.
 
-As mentioned above, we are given the three crystal lattice vectors, which together can form a basis for the crystal :$(a_1, a_2, a_3)^T$.  We can describe the position of an atom in the crystal $R(x,y,z)$, where x,y,z are the real space coordinates, in terms of the basis vectors themselves:
+As mentioned above, we are given the three crystal lattice vectors, which together can form a basis for the crystal: $$(a_1, a_2, a_3)^T$$.  We can describe the position of an atom in the crystal R(x,y,z), where x,y,z are the real space coordinates, in terms of the basis vectors themselves:
 
 $$R(x,y,z)=a_1+a_2y+a_3z$$
 
