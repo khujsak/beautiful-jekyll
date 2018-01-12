@@ -2,6 +2,7 @@
 layout: post
 title: Nomad Transparent Conducting Oxide Kaggle Part 1
 subtitle: Vornoi Tesselation and Formation Energy Prediction
+use_math: true
 ---
 
 Recently, a high quality dataset of formation energies and bandgaps for a family of sesquioxide type materials was posted on Kaggle by the Fritz Haber Institute of the Max Planck Society with calculated material parameters and unit cell structures ([link](https://www.kaggle.com/c/nomad2018-predict-transparent-conductors/)).  For those not in a Materials Science or Chemistry related field, transparent conducting oxides (TCOs) are a crucial class of functional materials which combine optical transparency with electrical conductivity.  These materials are used to enable every from capacity sensing in the touchscreens of smartphones, to the top electrode of solar cell devices.  Given that such devices are so widely employed, and there exists considerable demand for even more, there is a pressing need to develop new classes of materials which have favorable properties and are relatively inexpensive.  Suitable TCOs today rely on rare earth elements, whose price and supply can fluctuate wildly. 
