@@ -23,8 +23,6 @@ Let's start by importing some helper libraries and the main .csv file, which con
 
 import pandas as pd
 import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 import plotly.plotly as py
 import plotly.graph_objs as go
@@ -226,7 +224,7 @@ print(min_x, max_x, min_y, max_y, min_z, max_z)
 As promised, the reduced coordinates fill a unit square parameterized by the lattice vectors of the crystal.  This will allow us to build periodic arrays of the unit cell simply by stacking unit squares, for an arbitrary unit cell/basis vectors.  
 We would like to encode this three-dimensional information that in some intuitive fashion gives us an idea about the stability or electronic structure of the material.  The formation energy or stability of a compound is related to the energies contained in the bonds of the material.  One could simply construct a graph for the crystal structure, where connectivity is determined by some cut off (or perhaps inspired by the ionic radii of the elements).  However, this often requires extensive hand tuning for each structure, and is therefore low throughput.  Encoding periodicity is also relatively challenging, as this network analysis cannot be performed in reduced coordinates, since bond lengths are expressed in real space!
 
-To overcome these challenges, we will consider the construction of [Wigner-Seitz Cells] (https://en.wikipedia.org/wiki/Wigner%E2%80%93Seitz_cell) for each element in the crystal.  Each cell is composed of the points which are closer to the position of a central atom than any other position.  Such a construction gives an intuitive expression for the available volume of each element.  Neighboring elements which share a large face should therefore participate in a relatively large amount of bonding.  Efficient methods for calculating these cells can be done through a voronoi tessellation by constructing vectors from each atom to all others and taking the perpendicular bisectors.
+To overcome these challenges, we will consider the construction of [Wigner-Seitz Cells](https://en.wikipedia.org/wiki/Wigner%E2%80%93Seitz_cell) for each element in the crystal.  Each cell is composed of the points which are closer to the position of a central atom than any other position.  Such a construction gives an intuitive expression for the available volume of each element.  Neighboring elements which share a large face should therefore participate in a relatively large amount of bonding.  Efficient methods for calculating these cells can be done through a voronoi tessellation by constructing vectors from each atom to all others and taking the perpendicular bisectors.
 
 We will use a python package tess, which is a pythonic interface to the voro++ package.  This package has built in support for periodic cells.
 
@@ -240,9 +238,9 @@ cntr=ts.Container(xyz, limits=((0,0,0),(1,1,1)), periodic=True)
 
 
 ```python
-test=[v.centroid() for v in cntr]
-test=np.array(test)
-np.shape(test)
+cells=[v.centroid() for v in cntr]
+cells=np.array(cells)
+np.shape(cells)
 ```
 
 
@@ -261,16 +259,12 @@ We will now pick three random cells, [0,1,15] and plot their volume in 3D.
 
 
 ```python
-test=[v.vertices() for v in cntr]
+cell_vertices=[v.vertices() for v in cntr]
+cell_vertices=np.array(cell_vertices)
 
-test=np.array(test)
-
-np.shape(test)
-
-
-test0=np.array(test[0])
-test1=np.array(test[1])
-test2=np.array(test[15])
+cell_vertices0=np.array(cell_vertices[0])
+cell_vertices1=np.array(cell_vertices[1])
+cell_vertices2=np.array(cell_vertices[2])
 
 ```
 
@@ -283,25 +277,25 @@ r = lambda: random.randint(0,255)
 
 ```python
 
-trace0 = go.Mesh3d(x=test0[:,0],
-                   y=test0[:,1],
-                   z=test0[:,2],
+trace0 = go.Mesh3d(x=cell_vertices0[:,0],
+                   y=cell_vertices0[:,1],
+                   z=cell_vertices0[:,2],
                    alphahull=0,
                    opacity=0.4,
                    color='#%02X%02X%02X' % (r(),r(),r()))
 
 
-trace1 = go.Mesh3d(x=test1[:,0],
-                   y=test1[:,1],
-                   z=test1[:,2],
+trace1 = go.Mesh3d(x=cell_vertices1[:,0],
+                   y=cell_vertices1[:,1],
+                   z=cell_vertices1[:,2],
                    alphahull=0,
                    opacity=0.4,
                    color='#%02X%02X%02X' % (r(),r(),r()))
 
 
-trace2 = go.Mesh3d(x=test2[:,0],
-                   y=test2[:,1],
-                   z=test2[:,2],
+trace2 = go.Mesh3d(x=cell_vertices2[:,0],
+                   y=cell_vertices2[:,1],
+                   z=cell_vertices2[:,2],
                    alphahull=0,
                    opacity=0.4,
                    color='#%02X%02X%02X' % (r(),r(),r()))
@@ -323,7 +317,7 @@ And now we'll plot all of the cells!
 ```python
 trace=[]
 i=0
-for cell in test:
+for cell in cell_vertices:
     tmp=np.array(cell)
     trace.append(go.Mesh3d(x=tmp[:,0],
                    y=tmp[:,1],
@@ -349,7 +343,7 @@ Note that the space is still in reduced coordinates!  In order to interpret the 
 ```python
 trace=[]
 i=0
-for cell in test:
+for cell in cell_vertices:
     tmp=np.array(cell)
     
     for i in range(np.shape(tmp)[0]):
