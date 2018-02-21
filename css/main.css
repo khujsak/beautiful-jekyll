@@ -749,3 +749,7 @@ td.gutter {
 .gist, .gist-file table tr td {
   border: unset;
 }
+/* To center images */
+.center {
+    text-align: center;
+}
