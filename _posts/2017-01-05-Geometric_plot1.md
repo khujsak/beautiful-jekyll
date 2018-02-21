@@ -3,7 +3,7 @@ layout: post
 title: Nomad Transparent Conducting Oxide Kaggle Part 1
 subtitle: Voronoi Tesselation and Formation Energy Prediction
 use_math: true
-bigimg: /img/solarcell.jpg
+image: /img/solarcell.jpg
 ---
 
 <script type="text/javascript" async
