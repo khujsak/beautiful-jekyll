@@ -32,7 +32,8 @@ navbar-links:
     - DM Script Database: "https://www.felmi-zfe.at/dm-script/"
     - Tomopy: "https://tomopy.readthedocs.io/en/latest/"
     - MBIR: "https://engineering.purdue.edu/~bouman/OpenMBIR/haadf-em/index.html"
-  About Me / Contact: "aboutme"
+  About Me / Contact:
+    - Bio: "aboutme"
     - Publications: "https://scholar.google.com/citations?user=jbMplhYAAAAJ&hl=en"
     - Code: "https://github.com/khujsak"  
     - CV: "cv"
