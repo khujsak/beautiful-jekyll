@@ -22,11 +22,7 @@ description: A collection of projects and blogs on ML and datascience in electro
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
-navbar-links:
-  About Me: "aboutme"
 
-  GScholarPage: "https://scholar.google.com/citations?user=jbMplhYAAAAJ&hl=en"
-  
 navbar-links:
   Blog: ""
   Projects: 
@@ -34,7 +30,13 @@ navbar-links:
     - Stage-Rocked Electron Channeling: "omec"  
   Resources:
     - DM Script Database: "https://www.felmi-zfe.at/dm-script/"
+    - Tomopy: "https://tomopy.readthedocs.io/en/latest/"
+    - MBIR: "https://engineering.purdue.edu/~bouman/OpenMBIR/haadf-em/index.html"
   About Me / Contact: "aboutme"
+    - Publications: "https://scholar.google.com/citations?user=jbMplhYAAAAJ&hl=en"
+    - Code: "https://github.com/khujsak"  
+    - CV: "cv"
+    - Resume: "resume"
 nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
