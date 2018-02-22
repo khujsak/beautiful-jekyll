@@ -22,7 +22,6 @@ description: A collection of projects and blogs on ML and datascience in electro
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
-
 navbar-links:
   Blog: ""
   Projects: 
@@ -53,7 +52,7 @@ avatar: "/img/EM.png"
 # By default, the navigation bar and footer have a light gray background, and the main page
 # has a white background. You can specify a different background colour or a background image
 # for the navigation bar, the main page, and the footer.
- navbar-col: "#4c516d"
+# navbar-col: "#4c516d"
 # navbar-img: "/img/bgimage.png"
 # footer-col: "blue"
 # footer-img: "/img/bgimage.png"
