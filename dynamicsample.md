@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Dynamic Sampling of Analytical Electron Maps
 subtitle: High Speed/Low Dose Elemental Imaging of Materials
 ---
