@@ -68,7 +68,9 @@ $$
 z^Tz -2z^THD\alpha + \alpha^TD^TH^THD\alpha +
 \alpha^Tc\alpha-
 \alpha^TD^TH^THD\alpha -
-\alpha^T(cI-D^TH^THD)\alpha_0-
+\ldots$$
+$$
+\ldots \alpha^T(cI-D^TH^THD)\alpha_0-
 \alpha_0^T(cI-D^TH^THD)\alpha+
 \alpha_0^T(cI-D^TH^THD)\alpha_0 
   $$
