@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sparsity in Signal Reconstruction
+title: Optimization with Sparse Regularization
 subtitle: Majorization and Minimization Derivation
 use_math: true
 ---
