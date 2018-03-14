@@ -10,13 +10,13 @@ If you're not aware of the excellent edX MOOC course currently running from the 
 
 In one of his early lectures he provides an overview of the Majorization-Minimization method for ISTA, where he defines the auxiliary function:
 
-$$ \bold{Q(\alpha, \alpha_0) = \lambda \| \alpha \|_1 + \frac{1}{2} \|z -HD\alpha \|_2^2 + \frac{c}{2} \|\alpha - \alpha_0 \|^2_2 - \frac{1}{2} ||HD (\alpha- \alpha_0) \|^2_2 }  $$ 
+$$ \bm{Q(\alpha, \alpha_0) = \lambda \| \alpha \|_1 + \frac{1}{2} \|z -HD\alpha \|_2^2 + \frac{c}{2} \|\alpha - \alpha_0 \|^2_2 - \frac{1}{2} ||HD (\alpha- \alpha_0) \|^2_2 }  $$ 
 
 And states that this can be simplified into :
 
 $$\bold{Q(\alpha, \alpha_0)  = \lambda \| \alpha \|_1  + \frac{c}{2} \Big\|\alpha -  \Big\{ \alpha_0 +\frac{1}{c}(HD)^T (z-HD\alpha_0) \Big\} \Big\|_2^2 + }\text{ Const.}$$
 
-This is an important result, as the subtracted term in the $\ell_2$ norm is not a function of $\alpha$.  Therefore, we can compact the equation into the following form:
+This is an important result, as the subtracted term in the $$\ell_2$$ norm is not a function of $\alpha$.  Therefore, we can compact the equation into the following form:
 $$ \bold{Q(\alpha, \alpha_0)  = \lambda \| \alpha \|_1  + \frac{c}{2} \Big\|\alpha -  v_0  \Big\|_2^2 + }\text{Const.} $$
 
 $$ \bold{v_0 =    \alpha_0 +\frac{1}{c}(HD)^T (z-HD\alpha_0) } $$
@@ -33,7 +33,7 @@ Which factored yields:
 
 $$ \bold{Q(\alpha, \alpha_0) = J(\alpha) +  \frac{1}{2}(\alpha - \alpha_0)^T (cI - D^TH^THD)(\alpha - \alpha_0) } $$
 
-Let's replace J with the original expression and expand out the $\ell_2$ norm:
+Let's replace J with the original expression and expand out the $$\ell_2$$ norm:
 $$ \bold{Q(\alpha, \alpha_0) = \lambda \| \alpha \|_1 + \frac{1}{2} \|z -HD\alpha \|_2^2 +  \frac{1}{2}(\alpha - \alpha_0)^T (cI - D^TH^THD)(\alpha - \alpha_0) } $$
 
 $$ \bold{Q(\alpha, \alpha_0) = \lambda \| \alpha \|_1 + \frac{1}{2} 
@@ -56,7 +56,7 @@ $$\bold{
 z=HD\alpha  \quad \textrm { and} \quad z^Tz = c
 }$$
 
-Let's hold off considering the $\ell_1$ term and the fractions for simplicity in the following:
+Let's hold off considering the $$\ell_1$$ term and the fractions for simplicity in the following:
 
 $$  \bold{
 (z^Tz -2z^THD\alpha + \alpha^TD^TH^THD\alpha) +
@@ -90,7 +90,7 @@ z^Tz + \alpha_0^T(cI-D^TH^THD)\alpha_0
 -2(z^THD
 +\alpha^T_0(cI-D^TH^THD))\alpha}$$
 
-Note that the first three terms do not depend on $\alpha$, and we can simplify them as a constant factor:
+Note that the first three terms do not depend on $$\alpha$$, and we can simplify them as a constant factor:
 
 $$\bold{Q(\alpha, \alpha_0) =
 \alpha^Tc\alpha
@@ -99,7 +99,7 @@ $$\bold{Q(\alpha, \alpha_0) =
 +\text{Const.}
 $$
 
-To give some intuition about the next few steps we're going to take, it would be advantageous from an optimization framework if we could redefine the form of this equation in terms of an $\ell_2$ norm.  Let's remind ourselves what an $\ell_2$ norm looks like when expanded:
+To give some intuition about the next few steps we're going to take, it would be advantageous from an optimization framework if we could redefine the form of this equation in terms of an $\ell_2$ norm.  Let's remind ourselves what an $$\ell_2$$ norm looks like when expanded:
 
 $$\bold{\|x-b\|_2^2 = x^Tx - 2b^Tx +b^Tb
 }$$
@@ -116,7 +116,7 @@ $$\bold{Q(\alpha, \alpha_0) =c(
 -2b^T\alpha})
 +\text{Const.}
 $$
- And therefore we can redefine Q in terms of an $\ell_2$ norm and replace the fraction 1/2 we removed previously:
+ And therefore we can redefine Q in terms of an $$\ell_2$$ norm and replace the fraction 1/2 we removed previously:
 
 $$\bold{Q(\alpha, \alpha_0) =c(
 \alpha^T\alpha
@@ -130,7 +130,7 @@ $$\bold{Q(\alpha, \alpha_0) =\frac{c}{2}\|\alpha-b\|_2^2
 +\text{Const.}}
 $$
 
-Note that we are interested in the derivative of Q, and everything outside of the norm is a constant with respect to $\alpha$!  Folding these terms into the constant, replacing b, and returning the $\ell_1$ norm, we are left with the result from the class:
+Note that we are interested in the derivative of Q, and everything outside of the norm is a constant with respect to $$\alpha$$!  Folding these terms into the constant, replacing b, and returning the $$\ell_1$$ norm, we are left with the result from the class:
 
 Therefore:
 $$\bold{Q(\alpha, \alpha_0) =\lambda \| \alpha \|_1 +\frac{c}{2}\|\alpha-b\|_2^2
