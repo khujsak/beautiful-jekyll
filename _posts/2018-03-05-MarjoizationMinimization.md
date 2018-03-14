@@ -136,10 +136,10 @@ $$
 Note that we are interested in the derivative of Q, and everything outside of the norm is a constant with respect to $$\alpha$$!  Folding these terms into the constant, replacing b, and returning the $$\ell_1$$ norm, we are left with the result from the class:
 
 Therefore:
+
 $$Q(\alpha, \alpha_0) =\lambda \| \alpha \|_1 +\frac{c}{2}\|\alpha-b\|_2^2
 +\text{Const.}
 $$
-
 $$Q(\alpha, \alpha_0) =\lambda \| \alpha \|_1 +\frac{c}{2}\Big\|\alpha-\frac{1}{c}(D^TH^Tz + (cI - D^TH^THD))\alpha_0\Big\|_2^2
 +\text{Const.}
 $$
