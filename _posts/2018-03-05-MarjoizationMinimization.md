@@ -1,4 +1,11 @@
-﻿If you're not aware of the excellent edX MOOC course currently running from the Technion on applications of sparsity in signal restoration you should definitely take a [look](https://www.edx.org/course/sparse-representations-image-processing-israelx-236862-2x).  It's being taught by Professor Michael Elad, the mind behind the K-SVD algorithm.  This is an excellent opportunity to learn from the best.
+---
+layout: post
+title: Sparsity in Signal Reconstruction
+subtitle: Majorization and Minimization Derivation
+use_math: true
+---
+
+If you're not aware of the excellent edX MOOC course currently running from the Technion on applications of sparsity in signal restoration you should definitely take a [look](https://www.edx.org/course/sparse-representations-image-processing-israelx-236862-2x).  It's being taught by Professor Michael Elad, the mind behind the K-SVD algorithm.  This is an excellent opportunity to learn from the best.
 
 In one of his early lectures he provides an overview of the Majorization-Minimization method for ISTA, where he defines the auxiliary function:
 
