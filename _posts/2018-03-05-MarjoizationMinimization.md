@@ -119,6 +119,7 @@ $$Q(\alpha, \alpha_0) =c(
 -2b^T\alpha)
 +\text{Const.}
 $$
+
  And therefore we can redefine Q in terms of an $$\ell_2$$ norm and replace the fraction 1/2 we removed previously:
 
 $$Q(\alpha, \alpha_0) =c(
@@ -127,7 +128,8 @@ $$Q(\alpha, \alpha_0) =c(
 +\text{Const.}
 $$
 
-Therefore:
+Thus:
+
 $$Q(\alpha, \alpha_0) =\frac{c}{2}\|\alpha-b\|_2^2
 -\frac{c}{2}b^Tb
 +\text{Const.}
