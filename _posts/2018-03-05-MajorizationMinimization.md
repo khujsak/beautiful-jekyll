@@ -16,7 +16,7 @@ And states that this can be simplified into :
 
 $$Q(\alpha, \alpha_0)  = \lambda \| \alpha \|_1  + \frac{c}{2} \Big\|\alpha -  \Big\{ \alpha_0 +\frac{1}{c}(HD)^T (z-HD\alpha_0) \Big\} \Big\|_2^2 + \text{ Const.}$$
 
-This is an important result, as the subtracted term in the $$\ell_2$$ norm is not a function of $\alpha$.  Therefore, we can compact the equation into the following form:
+This is an important result, as the subtracted term in the $$\ell_2$$ norm is not a function of $$\alpha$$.  Therefore, we can compact the equation into the following form:
 
 $$ Q(\alpha, \alpha_0)  = \lambda \| \alpha \|_1  + \frac{c}{2} \Big\|\alpha -  v_0  \Big\|_2^2 + \text{Const.} $$
 
@@ -102,7 +102,7 @@ $$Q(\alpha, \alpha_0) =
 +\text{Const.}
 $$
 
-To give some intuition about the next few steps we're going to take, it would be advantageous from an optimization framework if we could redefine the form of this equation in terms of an $\ell_2$ norm.  Let's remind ourselves what an $$\ell_2$$ norm looks like when expanded:
+To give some intuition about the next few steps we're going to take, it would be advantageous from an optimization framework if we could redefine the form of this equation in terms of an $$\ell_2$$ norm.  Let's remind ourselves what an $$\ell_2$$ norm looks like when expanded:
 
 $$\|x-b\|_2^2 = x^Tx - 2b^Tx +b^Tb
 $$
